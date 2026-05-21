@@ -1,0 +1,211 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="xWgi2USGuGH-xuGpZH--" name="Página-1">
+    <mxGraphModel dx="4040" dy="3172" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ctrl" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fontSize=13;" value="&lt;&lt;RestController&gt;&gt;&#xa;VehiculoController" vertex="1">
+          <mxGeometry height="340" width="300" x="410" y="-1160" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_f1" parent="ctrl" style="text;align=left;spacingLeft=10;" value="- vehiculoService: VehiculoService" vertex="1">
+          <mxGeometry height="26" width="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_sep1" parent="ctrl" style="line;" value="" vertex="1">
+          <mxGeometry height="10" width="300" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_m1" parent="ctrl" style="text;align=left;spacingLeft=10;" value="+ getVehiculos(): ResponseEntity" vertex="1">
+          <mxGeometry height="26" width="300" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_m2" parent="ctrl" style="text;align=left;spacingLeft=10;" value="+ getByPlaca(placa): ResponseEntity" vertex="1">
+          <mxGeometry height="26" width="300" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_m3" parent="ctrl" style="text;align=left;spacingLeft=10;" value="+ getMediciones(vehiculoId): ResponseEntity" vertex="1">
+          <mxGeometry height="26" width="300" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_m4" parent="ctrl" style="text;align=left;spacingLeft=10;" value="+ postMedicion(body): ResponseEntity" vertex="1">
+          <mxGeometry height="26" width="300" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_m5" parent="ctrl" style="text;align=left;spacingLeft=10;" value="+ getTopContaminantes(): ResponseEntity" vertex="1">
+          <mxGeometry height="26" width="300" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_m6" parent="ctrl" style="text;align=left;spacingLeft=10;" value="+ getEvolucionMensual(): ResponseEntity" vertex="1">
+          <mxGeometry height="26" width="300" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_ann" parent="ctrl" style="text;align=left;spacingLeft=10;fontStyle=2;fontSize=11;" value="@GetMapping /vehicles&#xa;@GetMapping /vehicles/{placa}&#xa;@GetMapping /measurements&#xa;@PostMapping /measurements&#xa;@GetMapping /reports/top-polluters&#xa;@GetMapping /reports/monthly-evolution" vertex="1">
+          <mxGeometry height="70" width="300" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="svc" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fontSize=13;" value="&lt;&lt;Service&gt;&gt;&#xa;VehiculoService" vertex="1">
+          <mxGeometry height="300" width="300" x="410" y="-740" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_f1" parent="svc" style="text;align=left;spacingLeft=10;" value="- vehiculoRepo: VehiculoRepository" vertex="1">
+          <mxGeometry height="26" width="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_f2" parent="svc" style="text;align=left;spacingLeft=10;" value="- medicionRepo: MedicionCo2Repository" vertex="1">
+          <mxGeometry height="26" width="300" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_sep" parent="svc" style="line;" value="" vertex="1">
+          <mxGeometry height="10" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_m1" parent="svc" style="text;align=left;spacingLeft=10;" value="+ getAllVehiculos(): List&lt;VehiculoDTO&gt;" vertex="1">
+          <mxGeometry height="26" width="300" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_m2" parent="svc" style="text;align=left;spacingLeft=10;" value="+ getByPlaca(placa): Optional&lt;VehiculoDTO&gt;" vertex="1">
+          <mxGeometry height="26" width="300" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_m3" parent="svc" style="text;align=left;spacingLeft=10;" value="+ getMedicionesByVehiculo(id): List" vertex="1">
+          <mxGeometry height="26" width="300" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_m4" parent="svc" style="text;align=left;spacingLeft=10;" value="+ registrarMedicion(...): MedicionCo2" vertex="1">
+          <mxGeometry height="26" width="300" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_m5" parent="svc" style="text;align=left;spacingLeft=10;" value="+ getTopContaminantes(): List" vertex="1">
+          <mxGeometry height="26" width="300" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_m6" parent="svc" style="text;align=left;spacingLeft=10;" value="+ getEvolucionMensual(): List" vertex="1">
+          <mxGeometry height="26" width="300" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_m7" parent="svc" style="text;align=left;spacingLeft=10;fontStyle=2;" value="- toDTO(Vehiculo): VehiculoDTO" vertex="1">
+          <mxGeometry height="26" width="300" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="repo1" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fontSize=13;" value="&lt;&lt;Repository&gt;&gt;&#xa;VehiculoRepository" vertex="1">
+          <mxGeometry height="180" width="300" x="30" y="-360" as="geometry" />
+        </mxCell>
+        <mxCell id="repo1_ext" parent="repo1" style="text;align=left;spacingLeft=10;fontStyle=3;" value="extends JpaRepository&lt;Vehiculo, Long&gt;" vertex="1">
+          <mxGeometry height="26" width="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="repo1_sep" parent="repo1" style="line;" value="" vertex="1">
+          <mxGeometry height="10" width="300" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="repo1_m1" parent="repo1" style="text;align=left;spacingLeft=10;" value="+ findByPlaca(placa): Optional&lt;Vehiculo&gt;" vertex="1">
+          <mxGeometry height="26" width="300" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="repo1_m2" parent="repo1" style="text;align=left;spacingLeft=10;" value="+ findAllWithDetails(): List&lt;Vehiculo&gt;" vertex="1">
+          <mxGeometry height="26" width="300" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="repo1_ann" parent="repo1" style="text;align=left;spacingLeft=10;fontStyle=2;fontSize=11;" value="@Query (JOIN FETCH ciudad, tipo, combustible)" vertex="1">
+          <mxGeometry height="26" width="300" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="repo2" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fontSize=13;" value="&lt;&lt;Repository&gt;&gt;&#xa;MedicionCo2Repository" vertex="1">
+          <mxGeometry height="210" width="300" x="410" y="-360" as="geometry" />
+        </mxCell>
+        <mxCell id="repo2_ext" parent="repo2" style="text;align=left;spacingLeft=10;fontStyle=3;" value="extends JpaRepository&lt;MedicionCo2, Long&gt;" vertex="1">
+          <mxGeometry height="26" width="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="repo2_sep" parent="repo2" style="line;" value="" vertex="1">
+          <mxGeometry height="10" width="300" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="repo2_m1" parent="repo2" style="text;align=left;spacingLeft=10;" value="+ findByVehiculoId(...): List" vertex="1">
+          <mxGeometry height="26" width="300" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="repo2_m2" parent="repo2" style="text;align=left;spacingLeft=10;" value="+ findTopContaminantes(): List (native)" vertex="1">
+          <mxGeometry height="26" width="300" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="repo2_m3" parent="repo2" style="text;align=left;spacingLeft=10;" value="+ findEvolucionMensual(): List (native)" vertex="1">
+          <mxGeometry height="26" width="300" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="repo2_ann" parent="repo2" style="text;align=left;spacingLeft=10;fontStyle=2;fontSize=11;" value="@Query nativeQuery: RANK(), LAG(), AVG OVER()" vertex="1">
+          <mxGeometry height="26" width="300" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_veh" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fontSize=13;" value="&lt;&lt;Entity&gt;&gt;&#xa;Vehiculo" vertex="1">
+          <mxGeometry height="280" width="270" x="50" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="ev1" parent="ent_veh" style="text;align=left;spacingLeft=10;" value="- idVehiculo: Long" vertex="1">
+          <mxGeometry height="24" width="260" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ev2" parent="ent_veh" style="text;align=left;spacingLeft=10;" value="- placa: String" vertex="1">
+          <mxGeometry height="24" width="260" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="ev3" parent="ent_veh" style="text;align=left;spacingLeft=10;" value="- modelo: String" vertex="1">
+          <mxGeometry height="24" width="260" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="ev4" parent="ent_veh" style="text;align=left;spacingLeft=10;" value="- anoFabricacion: Integer" vertex="1">
+          <mxGeometry height="24" width="260" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="ev5" parent="ent_veh" style="text;align=left;spacingLeft=10;" value="- cilindraje: Integer" vertex="1">
+          <mxGeometry height="24" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="ev6" parent="ent_veh" style="text;align=left;spacingLeft=10;fontStyle=3;" value="- ciudad: Ciudad (@ManyToOne)" vertex="1">
+          <mxGeometry height="24" width="260" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ev7" parent="ent_veh" style="text;align=left;spacingLeft=10;fontStyle=3;" value="- tipoVehiculo: TipoVehiculo (@ManyToOne)" vertex="1">
+          <mxGeometry height="24" width="260" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="ev8" parent="ent_veh" style="text;align=left;spacingLeft=10;fontStyle=3;" value="- combustible: Combustible (@ManyToOne)" vertex="1">
+          <mxGeometry height="24" width="260" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="ev9" parent="ent_veh" style="text;align=left;spacingLeft=10;fontStyle=3;" value="- propietario: Propietario (@ManyToOne)" vertex="1">
+          <mxGeometry height="24" width="260" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_med" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fontSize=13;" value="&lt;&lt;Entity&gt;&gt;&#xa;MedicionCo2" vertex="1">
+          <mxGeometry height="230" width="260" x="430" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="em1" parent="ent_med" style="text;align=left;spacingLeft=10;" value="- idMedicion: Long" vertex="1">
+          <mxGeometry height="24" width="260" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="em2" parent="ent_med" style="text;align=left;spacingLeft=10;fontStyle=3;" value="- vehiculo: Vehiculo (@ManyToOne)" vertex="1">
+          <mxGeometry height="24" width="260" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="em3" parent="ent_med" style="text;align=left;spacingLeft=10;" value="- fecha: LocalDate" vertex="1">
+          <mxGeometry height="24" width="260" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="em4" parent="ent_med" style="text;align=left;spacingLeft=10;" value="- co2GKm: BigDecimal" vertex="1">
+          <mxGeometry height="24" width="260" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="em5" parent="ent_med" style="text;align=left;spacingLeft=10;" value="- temperatura: BigDecimal" vertex="1">
+          <mxGeometry height="24" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="em6" parent="ent_med" style="text;align=left;spacingLeft=10;" value="- humedad: BigDecimal" vertex="1">
+          <mxGeometry height="24" width="260" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="em7" parent="ent_med" style="text;align=left;spacingLeft=10;" value="- kilometraje: Long" vertex="1">
+          <mxGeometry height="24" width="260" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="dto" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fontSize=13;" value="&lt;&lt;DTO&gt;&gt;&#xa;VehiculoDTO" vertex="1">
+          <mxGeometry height="260" width="260" x="790" y="-290" as="geometry" />
+        </mxCell>
+        <mxCell id="dto1" parent="dto" style="text;align=left;spacingLeft=10;" value="+ idVehiculo: Long" vertex="1">
+          <mxGeometry height="24" width="260" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dto2" parent="dto" style="text;align=left;spacingLeft=10;" value="+ placa: String" vertex="1">
+          <mxGeometry height="24" width="260" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="dto3" parent="dto" style="text;align=left;spacingLeft=10;" value="+ modelo: String" vertex="1">
+          <mxGeometry height="24" width="260" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="dto4" parent="dto" style="text;align=left;spacingLeft=10;" value="+ ciudad: String" vertex="1">
+          <mxGeometry height="24" width="260" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="dto5" parent="dto" style="text;align=left;spacingLeft=10;" value="+ departamento: String" vertex="1">
+          <mxGeometry height="24" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="dto6" parent="dto" style="text;align=left;spacingLeft=10;" value="+ tipoVehiculo: String" vertex="1">
+          <mxGeometry height="24" width="260" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dto7" parent="dto" style="text;align=left;spacingLeft=10;" value="+ combustible: String" vertex="1">
+          <mxGeometry height="24" width="260" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="dto8" parent="dto" style="text;align=left;spacingLeft=10;" value="+ propietario: String" vertex="1">
+          <mxGeometry height="24" width="260" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="ctrl" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;startArrow=none;strokeWidth=2;dashed=1;" target="svc" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="svc" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeWidth=2;dashed=1;" target="repo1" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="svc" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeWidth=2;dashed=1;" target="repo2" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="repo1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeWidth=2;" target="ent_veh" value="gestiona">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="repo2" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeWidth=2;" target="ent_med" value="gestiona">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="svc" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeWidth=2;dashed=1;" target="dto" value="retorna">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
