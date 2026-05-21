@@ -1,0 +1,202 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="gXBBFEkUv3cqaEsBxmUi" name="Página-1">
+    <mxGraphModel dx="2828" dy="2571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-4" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="&lt;&lt;RestController&gt;&gt;&#xa;VehiculoController" vertex="1">
+          <mxGeometry height="230" width="280" x="505" y="-1130" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-5" parent="lCjjo4EnVL0tT-hEwJkD-4" style="text;strokeColor=none;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="- vehiculoService : VehiculoService" vertex="1">
+          <mxGeometry height="24" width="280" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-6" parent="lCjjo4EnVL0tT-hEwJkD-4" style="line;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-7" parent="lCjjo4EnVL0tT-hEwJkD-4" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getVehiculos() : ResponseEntity" vertex="1">
+          <mxGeometry height="24" width="280" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-8" parent="lCjjo4EnVL0tT-hEwJkD-4" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getVehiculoByPlaca(placa) : ResponseEntity" vertex="1">
+          <mxGeometry height="24" width="280" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-9" parent="lCjjo4EnVL0tT-hEwJkD-4" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getMediciones(vehiculoId) : ResponseEntity" vertex="1">
+          <mxGeometry height="24" width="280" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-10" parent="lCjjo4EnVL0tT-hEwJkD-4" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ postMedicion(body) : ResponseEntity" vertex="1">
+          <mxGeometry height="24" width="280" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-11" parent="lCjjo4EnVL0tT-hEwJkD-4" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getTopContaminantes() : ResponseEntity" vertex="1">
+          <mxGeometry height="24" width="280" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-12" parent="lCjjo4EnVL0tT-hEwJkD-4" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getEvolucionMensual() : ResponseEntity" vertex="1">
+          <mxGeometry height="24" width="280" y="202" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-13" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="&lt;&lt;Service&gt;&gt;&#xa;VehiculoService" vertex="1">
+          <mxGeometry height="278" width="290" x="500" y="-840" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-14" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="- vehiculoRepo : VehiculoRepository" vertex="1">
+          <mxGeometry height="24" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-15" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="- medicionRepo : MedicionCo2Repository" vertex="1">
+          <mxGeometry height="24" width="290" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-16" parent="lCjjo4EnVL0tT-hEwJkD-13" style="line;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-17" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getAllVehiculos() : List&lt;VehiculoDTO&gt;" vertex="1">
+          <mxGeometry height="24" width="290" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-18" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getByPlaca(placa) : Optional&lt;VehiculoDTO&gt;" vertex="1">
+          <mxGeometry height="24" width="290" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-19" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getMedicionesByVehiculo(id) : List" vertex="1">
+          <mxGeometry height="24" width="290" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-20" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ registrarMedicion(...) : MedicionCo2" vertex="1">
+          <mxGeometry height="24" width="290" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-21" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getTopContaminantes() : List" vertex="1">
+          <mxGeometry height="24" width="290" y="202" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-22" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ getEvolucionMensual() : List" vertex="1">
+          <mxGeometry height="24" width="290" y="226" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-23" parent="lCjjo4EnVL0tT-hEwJkD-13" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontStyle=2;" value="- toDTO(Vehiculo) : VehiculoDTO" vertex="1">
+          <mxGeometry height="24" width="290" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-24" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="&lt;&lt;Repository&gt;&gt;&#xa;VehiculoRepository" vertex="1">
+          <mxGeometry height="156" width="280" x="120" y="-780" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-25" parent="lCjjo4EnVL0tT-hEwJkD-24" style="text;strokeColor=none;fillColor=#f5f5f5;align=left;spacingLeft=8;fontStyle=3;" value="extends JpaRepository&lt;Vehiculo, Long&gt;" vertex="1">
+          <mxGeometry height="24" width="280" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-26" parent="lCjjo4EnVL0tT-hEwJkD-24" style="line;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-27" parent="lCjjo4EnVL0tT-hEwJkD-24" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ findByPlaca(placa) : Optional&lt;Vehiculo&gt;" vertex="1">
+          <mxGeometry height="24" width="280" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-28" parent="lCjjo4EnVL0tT-hEwJkD-24" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ findAllWithDetails() : List&lt;Vehiculo&gt;" vertex="1">
+          <mxGeometry height="24" width="280" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-29" parent="lCjjo4EnVL0tT-hEwJkD-24" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ findByCiudadId(id) : List&lt;Vehiculo&gt;" vertex="1">
+          <mxGeometry height="24" width="280" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-30" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="&lt;&lt;Repository&gt;&gt;&#xa;MedicionCo2Repository" vertex="1">
+          <mxGeometry height="156" width="290" x="500" y="-489" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-31" parent="lCjjo4EnVL0tT-hEwJkD-30" style="text;strokeColor=none;fillColor=#f5f5f5;align=left;spacingLeft=8;fontStyle=3;" value="extends JpaRepository&lt;MedicionCo2, Long&gt;" vertex="1">
+          <mxGeometry height="24" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-32" parent="lCjjo4EnVL0tT-hEwJkD-30" style="line;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-33" parent="lCjjo4EnVL0tT-hEwJkD-30" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ findByVehiculoId(...) : List&lt;MedicionCo2&gt;" vertex="1">
+          <mxGeometry height="24" width="290" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-34" parent="lCjjo4EnVL0tT-hEwJkD-30" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ findTopContaminantes() : List" vertex="1">
+          <mxGeometry height="24" width="290" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-35" parent="lCjjo4EnVL0tT-hEwJkD-30" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ findEvolucionMensual() : List" vertex="1">
+          <mxGeometry height="24" width="290" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-36" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fillColor=#f5f5f5;strokeColor=#000000;fontSize=12;" value="&lt;&lt;Entity&gt;&gt;&#xa;Vehiculo" vertex="1">
+          <mxGeometry height="278" width="250" x="135" y="-550" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-37" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- idVehiculo : Long" vertex="1">
+          <mxGeometry height="24" width="250" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-38" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- placa : String" vertex="1">
+          <mxGeometry height="24" width="250" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-39" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- modelo : String" vertex="1">
+          <mxGeometry height="24" width="250" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-40" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- anoFabricacion : Integer" vertex="1">
+          <mxGeometry height="24" width="250" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-41" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- cilindraje : Integer" vertex="1">
+          <mxGeometry height="24" width="250" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-42" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontStyle=3;" value="- ciudad : Ciudad" vertex="1">
+          <mxGeometry height="24" width="250" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-43" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontStyle=3;" value="- tipoVehiculo : TipoVehiculo" vertex="1">
+          <mxGeometry height="24" width="250" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-44" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontStyle=3;" value="- combustible : Combustible" vertex="1">
+          <mxGeometry height="24" width="250" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-45" parent="lCjjo4EnVL0tT-hEwJkD-36" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontStyle=3;" value="- propietario : Propietario" vertex="1">
+          <mxGeometry height="24" width="250" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-46" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fillColor=#f5f5f5;strokeColor=#000000;fontSize=12;" value="&lt;&lt;Entity&gt;&gt;&#xa;MedicionCo2" vertex="1">
+          <mxGeometry height="206" width="250" x="520" y="-260" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-47" parent="lCjjo4EnVL0tT-hEwJkD-46" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- idMedicion : Long" vertex="1">
+          <mxGeometry height="24" width="250" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-48" parent="lCjjo4EnVL0tT-hEwJkD-46" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontStyle=3;" value="- vehiculo : Vehiculo" vertex="1">
+          <mxGeometry height="24" width="250" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-49" parent="lCjjo4EnVL0tT-hEwJkD-46" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- fecha : LocalDate" vertex="1">
+          <mxGeometry height="24" width="250" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-50" parent="lCjjo4EnVL0tT-hEwJkD-46" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- co2GKm : BigDecimal" vertex="1">
+          <mxGeometry height="24" width="250" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-51" parent="lCjjo4EnVL0tT-hEwJkD-46" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- temperatura : BigDecimal" vertex="1">
+          <mxGeometry height="24" width="250" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-52" parent="lCjjo4EnVL0tT-hEwJkD-46" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- humedad : BigDecimal" vertex="1">
+          <mxGeometry height="24" width="250" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-53" parent="lCjjo4EnVL0tT-hEwJkD-46" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="- kilometraje : Long" vertex="1">
+          <mxGeometry height="24" width="250" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-54" parent="1" style="swimlane;fontStyle=1;align=center;startSize=50;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="&lt;&lt;DTO&gt;&gt;&#xa;VehiculoDTO" vertex="1">
+          <mxGeometry height="230" width="240" x="940" y="-816" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-55" parent="lCjjo4EnVL0tT-hEwJkD-54" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ idVehiculo : Long" vertex="1">
+          <mxGeometry height="24" width="240" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-56" parent="lCjjo4EnVL0tT-hEwJkD-54" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ placa : String" vertex="1">
+          <mxGeometry height="24" width="240" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-57" parent="lCjjo4EnVL0tT-hEwJkD-54" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ modelo : String" vertex="1">
+          <mxGeometry height="24" width="240" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-58" parent="lCjjo4EnVL0tT-hEwJkD-54" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ ciudad : String" vertex="1">
+          <mxGeometry height="24" width="240" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-59" parent="lCjjo4EnVL0tT-hEwJkD-54" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ tipoVehiculo : String" vertex="1">
+          <mxGeometry height="24" width="240" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-60" parent="lCjjo4EnVL0tT-hEwJkD-54" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ combustible : String" vertex="1">
+          <mxGeometry height="24" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-61" parent="lCjjo4EnVL0tT-hEwJkD-54" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;" value="+ propietario : String" vertex="1">
+          <mxGeometry height="24" width="240" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-62" edge="1" parent="1" source="lCjjo4EnVL0tT-hEwJkD-4" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;strokeColor=#000000;strokeWidth=1.5;fontSize=11;" target="lCjjo4EnVL0tT-hEwJkD-13" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-63" edge="1" parent="1" source="lCjjo4EnVL0tT-hEwJkD-13" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;strokeColor=#000000;strokeWidth=1.5;fontSize=11;" target="lCjjo4EnVL0tT-hEwJkD-24" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-64" edge="1" parent="1" source="lCjjo4EnVL0tT-hEwJkD-13" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;strokeColor=#000000;strokeWidth=1.5;fontSize=11;" target="lCjjo4EnVL0tT-hEwJkD-30" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-65" edge="1" parent="1" source="lCjjo4EnVL0tT-hEwJkD-24" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#000000;strokeWidth=1.5;fontSize=11;" target="lCjjo4EnVL0tT-hEwJkD-36" value="gestiona">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-66" edge="1" parent="1" source="lCjjo4EnVL0tT-hEwJkD-30" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#000000;strokeWidth=1.5;fontSize=11;" target="lCjjo4EnVL0tT-hEwJkD-46" value="gestiona">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lCjjo4EnVL0tT-hEwJkD-67" edge="1" parent="1" source="lCjjo4EnVL0tT-hEwJkD-13" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;strokeColor=#000000;strokeWidth=1.5;fontSize=11;" target="lCjjo4EnVL0tT-hEwJkD-54" value="retorna">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
